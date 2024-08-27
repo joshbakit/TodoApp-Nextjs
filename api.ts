@@ -1,13 +1,15 @@
 import { ITask } from "./types/task"
 
 
-const baseUrl = 'http://localhost:3001'
+// const baseUrl = 'http://localhost:3001'
+const baseUrl = 'https://todo-app-server-task.onrender.com'
 
 export const getAllTodos = async (): Promise<ITask[]> => {
 
     const response = await fetch(`${baseUrl}/task`, { cache: 'no-store' })
     const data = await response.json()
     return data;
+    console.log("connected to json-server")
 }
 
 export const addTodo = async (newTask: ITask): Promise<ITask> => {

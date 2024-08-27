@@ -80,7 +80,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
               <div className="label">
                 <span className="label-text">Edit your task ...</span>
               </div>
-              <div className="flex gap-2 tooltop" tooltip-warning>
+              <div className="flex gap-2 tooltop" >
                 <input
                   value={taskToEdit}
                   onChange={(e) => setTaskToEdit(e.target.value)}
